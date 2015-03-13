@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="GAME OBJECTS">
+    <Position X="6.146" Y="0.5" Height="0.281" Width="0.981" />
+  </Comment>
+  <Class Name="SpaceInvaders.GObjMan" Collapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAAGAAA=</HashCode>
+      <FileName>Game Objects\GObjMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.GObjectProxy" Collapsed="true">
+    <Position X="3.25" Y="1.5" Width="1.5" />
+    <AssociationLine Name="pGameObj" Type="SpaceInvaders.GameObj" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="1.5" />
+        <Point X="4.5" Y="1.26" />
+        <Point X="6.062" Y="1.26" />
+        <Point X="6.062" Y="1.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.268" Y="0.308" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAQAEAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Game Objects\GObjectProxy.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pGameObj" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.GameObj" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAEAAAAAAEAAAAAABkAAAFAAA=</HashCode>
+      <FileName>Game Objects\GameObj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Bird" Collapsed="true">
+    <Position X="3.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game Objects\Bird.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Alien" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game Objects\Alien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.AlienGrid" Collapsed="true">
+    <Position X="6.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAIAAAAAAAAAAAAIAAAAAEAAAEAAAAA=</HashCode>
+      <FileName>Game Objects\Hierarchy\AlienGrid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Crab" Collapsed="true">
+    <Position X="4.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game Objects\Concrete Objects\Crab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Octopus" Collapsed="true">
+    <Position X="5.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game Objects\Concrete Objects\Octopus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.RedBird" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game Objects\Concrete Objects\RedBird.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Squid" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Game Objects\Concrete Objects\Squid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.AlienFactory" Collapsed="true">
+    <Position X="1" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAIAAAAAABAggAAAAAAAABAEAQAAAAAAABAAAA=</HashCode>
+      <FileName>Game Objects\Factory\AlienFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Man" Collapsed="true">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="SpaceInvaders.Man.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Base Systems\Man.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <AssociationLine Name="active" Type="SpaceInvaders.MLink" FixedFromPoint="true">
+      <Path>
+        <Point X="2.5" Y="0.875" />
+        <Point X="3.25" Y="0.875" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="reserved" Type="SpaceInvaders.MLink">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.037" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQAAAAAACIIgAAAAAAQAABAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>Base Systems\Man.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+      <Field Name="reserved" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.MLink" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Base Systems\MLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

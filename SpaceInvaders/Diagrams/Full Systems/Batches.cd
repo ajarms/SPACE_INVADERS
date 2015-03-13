@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="SPRITE BATCH SYSTEM">
+    <Position X="6.083" Y="0.844" Height="0.271" Width="1.46" />
+  </Comment>
+  <Class Name="SpaceInvaders.BatchNode" Collapsed="true">
+    <Position X="5.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAYAAAAAABAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Sprites\Batches\BatchNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sprite" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.SBatchMan" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAIAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Sprites\Batches\SBatchMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.SpriteBatch" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAYAEEAAAAAEAAAACAAEAAADAAA=</HashCode>
+      <FileName>Sprites\Batches\SpriteBatch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.SubLink" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Sprites\Batches\SubLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.SubMan" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="SpaceInvaders.SubMan.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sprites\Batches\SubMan.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQAAAAAACIIgAAAAAAQAABAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Sprites\Batches\SubMan.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+      <Field Name="reserved" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.BSprite" Collapsed="true" HideInheritanceLine="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAEAAAAAAEAAAAAABkAAAFAAA=</HashCode>
+      <FileName>Sprites\BSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Man" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="SpaceInvaders.Man.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Base Systems\Man.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQAAAAAACIIgAAAAAAQAABAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>Base Systems\Man.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+      <Field Name="reserved" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.MLink" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Base Systems\MLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

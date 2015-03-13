@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="OBJECT MANAGERS">
+    <Position X="2.313" Y="0.5" Height="0.263" Width="1.283" />
+  </Comment>
+  <Class Name="SpaceInvaders.ImgMan" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Base Systems\ImgMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.TextMan" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Base Systems\TextMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Man" Collapsed="true">
+    <Position X="0.75" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="SpaceInvaders.Man.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Base Systems\Man.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <AssociationLine Name="active" Type="SpaceInvaders.MLink" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.375" />
+        <Point X="6.25" Y="1.375" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.579" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="reserved" Type="SpaceInvaders.MLink" FixedToPoint="true">
+      <Path>
+        <Point X="2.25" Y="1.125" />
+        <Point X="6.25" Y="1.125" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.568" Y="0.081" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQAAAAAACIIgAAAAAAQAABAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>Base Systems\Man.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+      <Field Name="reserved" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.MLink" Collapsed="true">
+    <Position X="6.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Base Systems\MLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.GObjMan" Collapsed="true">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAAGAAA=</HashCode>
+      <FileName>Game Objects\GObjMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.GSpriteMan" Collapsed="true">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Sprites\GSpriteMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.TimerMan" Collapsed="true">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABEIAAAAEAAAABAAAQAAABAAAEGAAA=</HashCode>
+      <FileName>Timer\TimerMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.PriorityQueue" Collapsed="true">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Timer\Queue\PriorityQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.PriorityNode" Collapsed="true">
+    <Position X="6.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Timer\Queue\PriorityNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.EventMan" Collapsed="true">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <InheritanceLine Type="SpaceInvaders.Man" FixedToPoint="true">
+      <Path>
+        <Point X="1.5" Y="1.509" />
+        <Point X="1.5" Y="1.76" />
+        <Point X="2.378" Y="1.76" />
+        <Point X="2.378" Y="3.808" />
+        <Point X="5.25" Y="3.808" />
+        <Point X="5.25" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Timer\EventMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.SBatchMan" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <InheritanceLine Type="SpaceInvaders.Man" FixedToPoint="true">
+      <Path>
+        <Point X="1.5" Y="1.509" />
+        <Point X="1.5" Y="1.76" />
+        <Point X="2.378" Y="1.76" />
+        <Point X="2.378" Y="3.808" />
+        <Point X="3.5" Y="3.808" />
+        <Point X="3.5" Y="4" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAIAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Sprites\Batches\SBatchMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvaders.AnimationEvent">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="SpaceInvaders.AnimationEvent.Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Timer\AnimationEvent.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAQAAAAAAQEEAAAgAAEAACAAAAEAAABAAA=</HashCode>
+      <FileName>Timer\AnimationEvent.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="animationTarget" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.Event" Collapsed="true">
+    <Position X="7.25" Y="2.5" Width="1.5" />
+    <InheritanceLine Type="SpaceInvaders.MLink" ManuallyRouted="true">
+      <Path>
+        <Point X="5.75" Y="1.009" />
+        <Point X="5.75" Y="1.221" />
+        <Point X="8" Y="1.221" />
+        <Point X="8" Y="2.5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Timer\Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Timer">
+    <Position X="4" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="~Timer" Hidden="true" />
+      <Method Name="getIndex" Hidden="true" />
+      <Method Name="getName" Hidden="true" />
+      <Field Name="index" Hidden="true" />
+      <Field Name="name" Hidden="true" />
+      <Method Name="set" Hidden="true" />
+      <Method Name="Timer" Hidden="true" />
+    </Members>
+    <AssociationLine Name="pEvent" Type="SpaceInvaders.Event" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.5" Y="4.439" />
+        <Point X="5.875" Y="4.439" />
+        <Point X="5.875" Y="2.812" />
+        <Point X="7.25" Y="2.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAEAAAAAAAQEEAAAAAAEAAAAAAAEAAABRAA=</HashCode>
+      <FileName>Timer\Timer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pEvent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.TimerMan">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <Members>
+      <Method Name="add" Hidden="true" />
+      <Method Name="create" Hidden="true" />
+      <Method Name="destroy" Hidden="true" />
+      <Method Name="getInstance" Hidden="true" />
+      <Method Name="getNew" Hidden="true" />
+      <Method Name="getTime" Hidden="true" />
+      <Field Name="instance" Hidden="true" />
+      <Method Name="remove" Hidden="true" />
+      <Method Name="TimerMan" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABEIAAAAEAAAABAAAQAAABAAAEGAAA=</HashCode>
+      <FileName>Timer\TimerMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.MLink" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Base Systems\MLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Man" Collapsed="true">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <AssociationLine Name="active" Type="SpaceInvaders.MLink">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.12" Y="-0.221" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQAAAAAACIIgAAAAAAQAABAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>Base Systems\Man.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+      <Field Name="reserved" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.GSprite" Collapsed="true">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAAAAAAAAEABAAAYAAAAAABAAQAAAAAAAAABEAAA=</HashCode>
+      <FileName>Sprites\GSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.PriorityQueue">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="PriorityQueue" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Timer\Queue\PriorityQueue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.PriorityNode">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <Members>
+      <Method Name="PriorityNode" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Timer\Queue\PriorityNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.EventMan">
+    <Position X="2.25" Y="3.25" Width="1.5" />
+    <Members>
+      <Field Name="instance" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Timer\EventMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

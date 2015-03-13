@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F659E02-AE46-443E-841D-3C71EA7F2AF5}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpaceInvaders</RootNamespace>
+    <AssemblyName>SpaceInvaders</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AzulLibraryDebug">
+      <HintPath>Resources\AzulLibraryDebug.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Game Objects\Factory\BombFactory.cs" />
+    <Compile Include="Collision\Observers\Test Observers\A_S_Observer.cs" />
+    <Compile Include="Collision\Observers\DestroyAlienObserver.cs" />
+    <Compile Include="Collision\Observers\DestroyMissileObserver.cs" />
+    <Compile Include="Collision\Observers\DestroyShieldObserver.cs" />
+    <Compile Include="Game Objects\Factory\AlienFactory.cs" />
+    <Compile Include="Collision\Observers\Test Observers\A_M_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\A_W_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\A_P_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\S_M_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\B_W_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\M_W_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\S_B_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\P_B_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\P_W_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\U_M_Observer.cs" />
+    <Compile Include="Collision\Observers\Test Observers\U_W_Observer.cs" />
+    <Compile Include="Game Objects\Factory\Factory.cs" />
+    <Compile Include="Game Objects\Bombs\BombB.cs" />
+    <Compile Include="Game Objects\Bombs\BombC.cs" />
+    <Compile Include="Game Objects\Bombs\BombRoot.cs" />
+    <Compile Include="Game Objects\Bombs\BombA.cs" />
+    <Compile Include="Game Objects\Bombs\_Bomb.cs" />
+    <Compile Include="Collision\ColMan.cs" />
+    <Compile Include="Collision\ColObject.cs" />
+    <Compile Include="Collision\ColPair.cs" />
+    <Compile Include="Game Objects\Aliens\AlienColumn.cs" />
+    <Compile Include="Game Objects\Aliens\AlienRoot.cs" />
+    <Compile Include="Game\GameManager.cs" />
+    <Compile Include="Game Objects\Shields\_Shield.cs" />
+    <Compile Include="Game Objects\Shields\ShieldBlock.cs" />
+    <Compile Include="Game Objects\Shields\ShieldColumn.cs" />
+    <Compile Include="Game Objects\Shields\ShieldRoot.cs" />
+    <Compile Include="Game Objects\Shields\Shield.cs" />
+    <Compile Include="Collision\Observers\Observer.cs" />
+    <Compile Include="Base Systems\NImage.cs" />
+    <Compile Include="Game Objects\Missiles\_Missile.cs" />
+    <Compile Include="Game Objects\Missiles\MissileRoot.cs" />
+    <Compile Include="Game Objects\Missiles\ShipMissile.cs" />
+    <Compile Include="Game Objects\Player\_Player.cs" />
+    <Compile Include="Game Objects\Player\PlayerRoot.cs" />
+    <Compile Include="Game Objects\Player\PlayerShip.cs" />
+    <Compile Include="Game Objects\Factory\MissileFactory.cs" />
+    <Compile Include="Game Objects\Hierarchy\PCSRoot.cs" />
+    <Compile Include="Game Objects\Factory\ShieldFactory.cs" />
+    <Compile Include="Game Objects\Factory\PlayerFactory.cs" />
+    <Compile Include="Game Objects\ProjectileMan.cs" />
+    <Compile Include="Game Objects\ProjectileNode.cs" />
+    <Compile Include="Timer\SoundEvent.cs" />
+    <Compile Include="Timer\SoundMan.cs" />
+    <Compile Include="Sprites\CSprite.cs" />
+    <Compile Include="Game Objects\Aliens\_Alien.cs" />
+    <Compile Include="Game Objects\Aliens\Crab.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game Objects\GameObj.cs" />
+    <Compile Include="Game Objects\GObjectNode.cs" />
+    <Compile Include="Game Objects\GObjMan.cs" />
+    <Compile Include="Game\Index.cs" />
+    <Compile Include="Game Objects\Aliens\Octopus.cs" />
+    <Compile Include="Base Systems\Man.cs" />
+    <Compile Include="Game Objects\Hierarchy\PCSTree.cs" />
+    <Compile Include="Game Objects\Hierarchy\PCSNode.cs" />
+    <Compile Include="Sprites\NSprite.cs" />
+    <Compile Include="Collision\Subject.cs" />
+    <Compile Include="Timer\Queue\PriorityNode.cs" />
+    <Compile Include="Timer\Queue\PriorityQueue.cs" />
+    <Compile Include="Game Objects\Aliens\Squid.cs" />
+    <Compile Include="Timer\AnimationEvent.cs" />
+    <Compile Include="Timer\AnimationMan.cs" />
+    <Compile Include="Timer\Event.cs" />
+    <Compile Include="Game\Constants.cs" />
+    <Compile Include="Base Systems\ImgMan.cs" />
+    <Compile Include="Sprites\Batches\BatchNode.cs" />
+    <Compile Include="Base Systems\Image.cs" />
+    <Compile Include="Base Systems\MLink.cs" />
+    <Compile Include="Sprites\Batches\SpriteBatch.cs" />
+    <Compile Include="Sprites\Batches\SBatchMan.cs" />
+    <Compile Include="Sprites\SpriteMan.cs" />
+    <Compile Include="Game\SpaceInvaders.cs" />
+    <Compile Include="Sprites\BSprite.cs" />
+    <Compile Include="Sprites\FSprite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Sprites\GSprite.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprites\Batches\SubLink.cs" />
+    <Compile Include="Sprites\Batches\SubMan.cs" />
+    <Compile Include="Base Systems\Texture.cs" />
+    <Compile Include="Base Systems\TextMan.cs" />
+    <Compile Include="Timer\Timer.cs" />
+    <Compile Include="Timer\TimerMan.cs" />
+    <Compile Include="Collision\Visitor.cs" />
+    <Compile Include="Game Objects\Walls\_Wall.cs" />
+    <Compile Include="Game Objects\Walls\WallRoot.cs" />
+    <Compile Include="Game Objects\Walls\WallBottom.cs" />
+    <Compile Include="Game Objects\Walls\WallLeft.cs" />
+    <Compile Include="Game Objects\Walls\WallRight.cs" />
+    <Compile Include="Game Objects\Walls\WallTop.cs" />
+    <Compile Include="Game Objects\UFOs\UFO.cs" />
+    <Compile Include="Game Objects\UFOs\UFORoot.cs" />
+    <Compile Include="Game Objects\UFOs\_UFO.cs" />
+    <Compile Include="Game Objects\Factory\WallFactory.cs" />
+    <Compile Include="Game Objects\Factory\UFOFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="Diagrams\OverallDiagram.cd" />
+    <None Include="Diagrams\BatchManDiagram.cd" />
+    <None Include="Diagrams\SpriteBatchDiagram.cd" />
+    <None Include="Diagrams\GameObjects.cd" />
+    <None Include="Diagrams\TimerDiagram.cd" />
+    <None Include="Diagrams\Full Systems\ObjectManagers.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy  /Y "$(SolutionDir)\SpaceInvaders\Resources\AzulLibraryDebug.dll" "$(SolutionDir)\SpaceInvaders\bin\Debug"
+copy  /Y "$(SolutionDir)\SpaceInvaders\Resources\irrKlang.dll" "$(SolutionDir)\SpaceInvaders\bin\Debug"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
