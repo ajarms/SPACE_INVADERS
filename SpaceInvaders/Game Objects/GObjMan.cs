@@ -176,7 +176,11 @@ namespace SpaceInvaders
         {
             GObjMan tmp = GObjMan.getInstance();
 
-            --tmp.numAliens;
+            //// reduce alien count, never to less than 1
+            //if (tmp.numAliens > 1.0f)
+            //{
+                --tmp.numAliens;
+            //}
         }
 
         public static void printStats()

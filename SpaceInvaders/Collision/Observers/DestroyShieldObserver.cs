@@ -15,7 +15,7 @@ namespace SpaceInvaders
 
             if (pSub.subA is _Shield)
             {
-                // remove alien & remove columns if needed
+                // remove block & remove columns if needed
                 parent = pSub.subA.parent as GameObj;
                 pSub.subA.removeMe();
                 if (parent.child == null)

@@ -13,6 +13,15 @@ namespace SpaceInvaders
 
         public override void update()
         {
+            if ((direction > 0 && x > Constants.SCREEN_WIDTH) ||
+                (direction < 0 && x < 0))
+            {
+                (EventMan.find(Event.Name.UFO_Sound) as SoundEvent).pause();
+                TempObjMan.add(this);
+                this.removeMe();
+                return;
+            }
+
             this.x += Constants.UFO_SPEED * direction;
             base.update();
         }

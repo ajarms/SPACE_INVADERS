@@ -93,6 +93,21 @@ namespace SpaceInvaders
             return tmp.currTime;
         }
 
+        // pause all time events
+        public static void wait(float waitTime)
+        {
+            TimerMan tmp = TimerMan.getInstance();
+
+            Timer curr = tmp.active as Timer;
+
+            while (curr != null)
+            {
+                curr.triggerTime += waitTime;
+
+                curr = curr.next as Timer;
+            }
+        }
+
         // releases everything on the active and reserve lists for GC
         public static void destroy()
         {

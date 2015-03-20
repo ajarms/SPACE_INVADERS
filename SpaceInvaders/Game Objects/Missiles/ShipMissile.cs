@@ -58,6 +58,11 @@ namespace SpaceInvaders
             tmp.notify();
         }
 
+        public override void visitShieldColumn(GameObj other)
+        {
+            other.visitMissile(this);
+        }
+
         public override void visitBomb(GameObj other)
         {
             Subject tmp = ColMan.getActivePair().sub;

@@ -29,6 +29,7 @@ namespace SpaceInvaders
             this.deltaOverride = false;
             this.deltaX = 0.0f;
             this.deltaY = 0.0f;
+            this.repeat = false;
         }
 
         ~AnimationEvent()
@@ -36,9 +37,10 @@ namespace SpaceInvaders
             this.animationTarget = null;
             this.current = null;
             this.listHead = null;
+            this.moveTarget = null;
         }
 
-        public void set(AnimationEvent.Name _name, bool deltaOverride, GameObj moveTarget, float deltaX, float deltaY)
+        public void set(AnimationEvent.Name _name, bool repeat, bool deltaOverride, GameObj moveTarget, float deltaX, float deltaY)
         {
             this.name = _name;
             this.deltaOverride = deltaOverride;
@@ -48,6 +50,8 @@ namespace SpaceInvaders
 
             switch (_name)
             {
+                case AnimationEvent.Name.Grid_Movement:
+                    break;
                 case AnimationEvent.Name.Crab_Animation:
                     this.animationTarget = SpriteMan.find(GSprite.Name.Crab);
                     break;
@@ -106,20 +110,24 @@ namespace SpaceInvaders
                 moveTarget.move(deltaX, deltaY);
             }
 
-            // get next image
-            ImgNode node = current.next as ImgNode;
-
-            // if null, get start of list
-            if (node == null)
+            // account for image swap
+            if (animationTarget != null)
             {
-                node = listHead as ImgNode;
+                // get next image
+                ImgNode node = current.next as ImgNode;
+
+                // if null, get start of list
+                if (node == null)
+                {
+                    node = listHead as ImgNode;
+                }
+
+                // change target sprite's image
+                animationTarget.img = node.image;
+
+                // reset current image
+                current = node;
             }
-
-            // change target sprite's image
-            animationTarget.img = node.image;
-
-            // reset current image
-            current = node;
 
             // add back onto timer
             TimerMan.add(Timer.Name.AlienAnimationTimer, this, deltaTime);
@@ -138,14 +146,18 @@ namespace SpaceInvaders
         //-------------------
         public AnimationEvent.Name name;
         public Index index = Index._0;
-
+        //image swap component
         protected GSprite animationTarget;
         private ImgNode current;
         private ImgLink listHead;
+        //movement component
         private GameObj moveTarget;
-        private bool deltaOverride;
         private float deltaX;
         private float deltaY;
+        //control for repetition
+        private bool repeat;
+        private bool deltaOverride;
+
     }
 
 

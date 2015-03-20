@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvaders.Factory">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="Factory" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAIAAAAAABAgEBAAAAAAAAAEAAAAAAAAABAAAA=</HashCode>
+      <FileName>Game Objects\Factory\Factory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.AlienFactory">
+    <Position X="0.75" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="AlienFactory" Hidden="true" />
+      <Method Name="getInstance" Hidden="true" />
+      <Method Name="getTree" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAFAIAQAACAAAAAAAAA=</HashCode>
+      <FileName>Game Objects\Factory\AlienFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.GObjectNode">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="~GObjectNode" Hidden="true" />
+      <Method Name="getIndex" Hidden="true" />
+      <Method Name="getName" Hidden="true" />
+      <Method Name="GObjectNode" Hidden="true" />
+      <Method Name="set" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAQAEAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Game Objects\GObjectNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.GObjMan" Collapsed="true">
+    <Position X="6.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAKAAAAEAAEICAAAFAIAABAAAQACABAAAAGAAA=</HashCode>
+      <FileName>Game Objects\GObjMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Man" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="SpaceInvaders.Man.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Base Systems\Man.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <AssociationLine Name="active" Type="SpaceInvaders.MLink">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.037" Y="0.258" Height="0.16" Width="0.683" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQACAAAACIIgAAAAAAQAABAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>Base Systems\Man.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.MLink" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Base Systems\MLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.ShieldFactory">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <Members>
+      <Method Name="getInstance" Hidden="true" />
+      <Method Name="getTree" Hidden="true" />
+      <Method Name="ShieldFactory" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAABAIAQAIAAAAAAAAAA=</HashCode>
+      <FileName>Game Objects\Factory\ShieldFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

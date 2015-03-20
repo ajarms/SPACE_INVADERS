@@ -7,7 +7,14 @@ namespace SpaceInvaders
     {
         public enum Name
         {
+            UFOTimer,
+            BombTimer,
+            BombAnimationTimer,
             AlienAnimationTimer,
+            DeathAnimationTimer,
+            RespawnTimer,
+            WaveTimer,
+            StopExplosionTimer,
             NOT_INITIALIZED
         }
 

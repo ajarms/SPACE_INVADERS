@@ -31,6 +31,10 @@ namespace SpaceInvaders
             Shield,
             ShieldColumn,
             ShieldBlock,
+            EnemyExplosion,
+            PlayerExplosion,
+            MissileExplosion,
+            BombExplosion,
             NOT_INITIALIZED
         }
 

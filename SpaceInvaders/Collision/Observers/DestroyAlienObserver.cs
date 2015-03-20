@@ -15,17 +15,15 @@ namespace SpaceInvaders
 
             if (pSub.subA is _Alien)
             {
-                // trigger explosion
-                ((pSub.subA.drawSprite as FSprite).target as GSprite).img = ImgMan.find(Image.Name.Alien_Explosion);
-                pSub.subA.drawSprite.draw();
-
                 // remove alien & remove columns if needed
                 parent = pSub.subA.parent as GameObj;
                 pSub.subA.removeMe();
                 if (parent.child == null)
                 {
+                    (parent.parent as AlienRoot).updateColumnCount();
                     parent.removeMe();
                 }
+                EventMan.find(Event.Name.Explosion_Sound).execute(0.0f);
             }
             else if (pSub.subB is _Alien)
             {
@@ -35,6 +33,7 @@ namespace SpaceInvaders
                 {
                     parent.removeMe();
                 }
+                EventMan.find(Event.Name.Explosion_Sound).execute(0.0f);
             }
             GObjMan.updateAlienCount();
         }

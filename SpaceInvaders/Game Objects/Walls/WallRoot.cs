@@ -35,7 +35,10 @@ namespace SpaceInvaders
             {
                 if ((curr is WallRight) || (curr is WallLeft))
                 {
-                    ColPair.collide(curr, other);
+                    if (ColPair.collide(curr, other))
+                    {
+                        return;
+                    }
                 }
                 curr = curr.sibling as _Wall;
             }

@@ -29,13 +29,15 @@ namespace SpaceInvaders
         {
             // step through children
             // when a collision is found
-            _Bomb curr = this.child as _Bomb;
+            GameObj curr = this.child as GameObj;
 
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-                
-                curr = curr.sibling as _Bomb;
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
+                curr = curr.sibling as GameObj;
             }
         }
 
@@ -43,43 +45,72 @@ namespace SpaceInvaders
         {
             // step through children
             // when a collision is found
-            _Bomb curr = this.child as _Bomb;
+            GameObj curr = this.child as GameObj;
 
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
-                curr = curr.sibling as _Bomb;
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
+                curr = curr.sibling as GameObj;
             }
         }
 
         public override void visitShieldRoot(GameObj other)
         {
-            other.visitBombRoot(this);
+            // step through children
+            // when a collision is found
+            GameObj curr = this.child as GameObj;
+
+            while (curr != null)
+            {
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
+                curr = curr.sibling as GameObj;
+            }
         }
 
         public override void visitShield(GameObj other)
         {
             // step through children
             // when a collision is found
-            _Bomb curr = this.child as _Bomb;
+            GameObj curr = this.child as GameObj;
 
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
-                curr = curr.sibling as _Bomb;
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
+                curr = curr.sibling as GameObj;
             }
         }
 
-        public override void visitShieldColumn(GameObj other)
+        public override void visitMissileRoot(GameObj other)
         {
-            other.visitBombRoot(this);
+            // step through children
+            // when a collision is found
+            GameObj curr = this.child as GameObj;
+
+            while (curr != null)
+            {
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
+                curr = curr.sibling as GameObj;
+            }
         }
 
-        public override void visitShieldBlock(GameObj other)
+        public override void visitMissile(GameObj other)
         {
-            ;
+            Subject tmp = ColMan.getActivePair().sub;
+
+            tmp.set(this, other);
+            tmp.notify();
         }
     }
 }

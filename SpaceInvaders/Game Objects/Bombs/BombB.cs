@@ -35,17 +35,22 @@ namespace SpaceInvaders
             tmp.notify();
         }
 
+        public override void visitShield(GameObj other)
+        {
+            other.visitBomb(this);
+        }
+
         public override void visitShieldColumn(GameObj other)
         {
             other.visitBomb(this);
         }
 
-        public override void visitShieldBlock(GameObj other)
-        {
-            Subject tmp = ColMan.getActivePair().sub;
+        //public override void visitShieldBlock(GameObj other)
+        //{
+        //    Subject tmp = ColMan.getActivePair().sub;
 
-            tmp.set(this, other);
-            tmp.notify();
-        }
+        //    tmp.set(this, other);
+        //    tmp.notify();
+        //}
     }
 }

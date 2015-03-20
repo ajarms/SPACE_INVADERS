@@ -9,12 +9,24 @@ namespace SpaceInvaders
         {
             this.x = _x;
             this.y = _y;
+            this.State = new ColumnState_CanFire();
         }
 
         public override void update()
         {
             base.unionUpdate();
         }
+
+        public void dropBomb()
+        {
+            fireState.handle(this);
+        }
+
+        public State State
+        {
+            set { fireState = value; }
+        }
+        private State fireState;
 
         //-----------------------------------
         // visitor handlers
@@ -50,8 +62,10 @@ namespace SpaceInvaders
             // collide against everything at this level
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
                 curr = curr.sibling as GameObj;
             }
         }
@@ -64,8 +78,10 @@ namespace SpaceInvaders
             // collide against everything at this level
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
                 curr = curr.sibling as GameObj;
             }
         }

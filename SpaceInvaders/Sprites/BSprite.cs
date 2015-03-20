@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace SpaceInvaders
 {
@@ -25,6 +26,11 @@ namespace SpaceInvaders
             Octopus,
             Squid,
             Crab,
+            Floor,
+            EnemyExplosion,
+            PlayerExplosion,
+            MissileExplosion,
+            BombExplosion,
             NullSprite,
             NOT_INITIALIZED
         }
@@ -35,6 +41,11 @@ namespace SpaceInvaders
             this.name = BSprite.Name.NOT_INITIALIZED;
             this.y = 0.0f;
             this.x = 0.0f;
+        }
+
+        public virtual void setColor(float red, float green, float blue)
+        {
+            Debug.Assert(false);
         }
 
         public void batchRemove()

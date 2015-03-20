@@ -35,23 +35,27 @@ namespace SpaceInvaders
         }
 
         // grabs from reserve, sets values, adds to active
-        public static AnimationEvent add(AnimationEvent.Name _name, bool deltaOverride = false, GameObj moveTarget = null, float deltaX = 0.0f, float deltaY = 0.0f)
+        public static Event add(Event target)
         {
             EventMan tmp = EventMan.getInstance();
 
-            AnimationEvent toAdd = tmp.baseAdd() as AnimationEvent;
+            EventNode toAdd = tmp.baseAdd() as EventNode;
 
-            toAdd.set(_name, deltaOverride, moveTarget, deltaX, deltaY);
+            toAdd.set(target);
 
-            return toAdd;
+            return toAdd.pEvent;
         }
 
         // search the active list; null on fail-to-find
-        public static AnimationEvent find(Enum _name, Index _index = Index._0)
+        public static Event find(Enum _name, Index _index = Index._0)
         {
             EventMan tmp = EventMan.getInstance();
 
-            return tmp.baseFind(_name, _index) as AnimationEvent;
+            EventNode eve = tmp.baseFind(_name, _index) as EventNode;
+
+            if (eve == null) { return null; }
+            
+            return eve.pEvent;
         }
 
         // remove from active list, put on reserve
@@ -73,12 +77,20 @@ namespace SpaceInvaders
         // our factory, makes blanks for the reserve list
         protected override object getNew()
         {
-            AnimationEvent e = new AnimationEvent();
+            EventNode e = new EventNode();
             return e;
         }
 
-        //-----------------------------------------------------------
-        // single untouchable Manager
+        public static void printStats()
+        {
+            EventMan tmp = EventMan.getInstance();
+
+            Debug.WriteLine("EVENT MANAGER");
+
+            tmp.basePrintStats();
+        }
+
+        //--------------------------
         private static EventMan instance;
     }
 }

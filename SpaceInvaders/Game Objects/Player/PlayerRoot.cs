@@ -9,12 +9,49 @@ namespace SpaceInvaders
         {
             this.x = _x;
             this.y = _y;
+            this.LeftState = new PlayerState_MoveL();
+            this.FireState = new PlayerState_CanFire();
+            this.RightState = new PlayerState_MoveR();
         }
 
         public override void update()
         {
             base.unionUpdate();
         }
+
+        public void fireMissile()
+        {
+            fireState.handle(this);
+        }
+
+        public void moveRight()
+        {
+            rightState.handle(this);
+        }
+
+        public void moveLeft()
+        {
+            leftState.handle(this);
+        }
+
+        public State LeftState
+        {
+            get { return leftState; }
+            set { leftState = value; }
+        }
+        public State RightState
+        {
+            get { return rightState; }
+            set { rightState = value; }
+        }
+        public State FireState
+        {
+            get { return fireState; }
+            set { fireState = value; }
+        }
+        private State fireState;
+        private State leftState;
+        private State rightState;
 
         //-----------------------------------
         // visitor handlers

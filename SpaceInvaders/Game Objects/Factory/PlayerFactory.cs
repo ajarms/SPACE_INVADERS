@@ -25,6 +25,7 @@ namespace SpaceInvaders
             return tmp.tree;
         }
 
+        // initializes root of player object tree
         public static void makePlayerRoot()
         {
             // make a test missle
@@ -44,6 +45,7 @@ namespace SpaceInvaders
             tmp.tree.insert(shipUnion, tmp.parent);
         }
 
+        // spawns new player at starting position
         public static void spawnPlayer()
         {
             GameObj pRoot = GObjMan.find(GameObj.Type._Player, GameObj.Name.PlayerRoot);
@@ -61,10 +63,11 @@ namespace SpaceInvaders
             tmp.setColBatch(SpriteBatch.Name.Collision);
 
             float startX = Constants.SCREEN_WIDTH / 2 - 26.0f;
-            float startY = 74.0f;
+            float startY = 128.0f + 10.0f;
 
             // Base of Ship
             _Player ship = new PlayerShip(Index._0, startX, startY, BSprite.Name.Ship_Base);
+            ship.drawSprite.setColor(0.0f, 250.0f, 0.0f);
 
             tmp.currBatch.add(ship.drawSprite);
             tmp.colBatch.add(ship.collision.drawSprite);
@@ -74,12 +77,14 @@ namespace SpaceInvaders
             //startX += 50.0f;
             startY += 6.0f;
             ship = new PlayerShip(Index._0, startX, startY, BSprite.Name.Ship_Blaster);
+            ship.drawSprite.setColor(0.0f, 250.0f, 0.0f);
 
             tmp.currBatch.add(ship.drawSprite);
             tmp.colBatch.add(ship.collision.drawSprite);
             tmp.tree.insert(ship, tmp.parent);
-
         }
+
+        
 
 
         //----------------------------------//

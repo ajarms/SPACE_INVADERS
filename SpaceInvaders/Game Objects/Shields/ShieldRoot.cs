@@ -34,13 +34,30 @@ namespace SpaceInvaders
             // collide against everything at this level
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
                 curr = curr.sibling as GameObj;
             }
         }
 
-        public override void visitBombRoot(GameObj other)
+        //public override void visitBombRoot(GameObj other)
+        //{
+        //    // drop one level
+        //    GameObj curr = this.child as GameObj;
+
+        //    // collide against everything at this level
+        //    while (curr != null)
+        //    {
+        //        if (ColPair.collide(curr, other))
+        //        {
+        //            curr = curr.sibling as GameObj;
+        //        }
+        //    }
+        //}
+
+        public override void visitBomb(GameObj other)
         {
             // drop one level
             GameObj curr = this.child as GameObj;
@@ -48,8 +65,10 @@ namespace SpaceInvaders
             // collide against everything at this level
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
                 curr = curr.sibling as GameObj;
             }
         }
@@ -62,8 +81,10 @@ namespace SpaceInvaders
             // collide against everything at this level
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
                 curr = curr.sibling as GameObj;
             }
         }

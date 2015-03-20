@@ -32,20 +32,19 @@ namespace SpaceInvaders
         }
 
         // search the active list; null on fail-to-find
-        public BatchNode find(Enum _name)
+        public BatchNode find(Enum _name, Index _index = Index._0)
         {
-            return this.baseFind(_name) as BatchNode;
+            return this.baseFind(_name, _index) as BatchNode;
         }
 
         // remove from active list, put on reserve
-        public void remove(Enum _name)
+        public void remove(Enum _name, Index _index = Index._0)
         {
-            this.baseRemove(_name);
+            this.baseRemove(_name, _index);
         }
 
         public void remove(BSprite outSprite)
         {
-            //this.baseRemove(sprite);
             BatchNode curr = this.active as BatchNode;
             BatchNode toRemove = null;
 

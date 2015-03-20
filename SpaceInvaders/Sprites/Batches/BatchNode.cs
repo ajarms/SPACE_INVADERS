@@ -20,6 +20,10 @@ namespace SpaceInvaders
             return this.sprite.name;
         }
 
+        public override Enum getIndex()
+        {
+            return this.sprite.index;
+        }
         // need to refactor to search for game objects
         public void set(BSprite _sprite)
         {

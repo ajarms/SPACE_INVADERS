@@ -21,10 +21,9 @@ namespace SpaceInvaders
             this.prev = p;
         }
 
-        virtual public Enum getName()
-        {
-            return null;
-        }
+        abstract public Enum getName();
+
+        abstract public Enum getIndex();
 
         public SubLink prev;
         public SubLink next;

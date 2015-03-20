@@ -45,29 +45,41 @@ namespace SpaceInvaders
             tmp.tree.insert(missileGroup, tmp.parent);
         }
 
-        public static void spawnMissile(float xPos, float yPos)
+        // loads missiles that will be needed during gameplay
+        public static void loadMissiles()
         {
-            
-            GameObj mRoot = GObjMan.find(GameObj.Type._Missile, GameObj.Name.MissileRoot);
+            _Missile pMissile = new ShipMissile(0.0f, 0.0f);
 
-            // cannot spawn a missile if one is in flight
-            if (mRoot.child != null)
+            TempObjMan.add(pMissile);
+        }
+
+        // fires missile from an object source
+        public static void fireMissile(GameObj pSource)
+        {
+            // grab loaded missile if available
+            _Missile boom = TempObjMan.find(GameObj.Name.Missile) as _Missile;
+            if (boom != null)
             {
-                return;
+                GameObj mRoot = GObjMan.find(GameObj.Type._Missile, GameObj.Name.MissileRoot);
+
+                // set missile
+                boom.x = pSource.collision.x + pSource.collision.w / 2.0f;
+                boom.y = pSource.collision.y + pSource.collision.h;
+
+                // add missile to draw and collision structures
+                MissileFactory tmp = MissileFactory.getInstance();
+
+                tmp.setParent(mRoot);
+                tmp.setBatch(SpriteBatch.Name.Projectiles);
+                tmp.setColBatch(SpriteBatch.Name.Collision);
+
+                tmp.currBatch.add(boom.drawSprite);
+                tmp.colBatch.add(boom.collision.drawSprite);
+                tmp.tree.insert(boom, tmp.parent);
+
+                // remove from temporary object list
+                TempObjMan.remove(boom.name, boom.index);
             }
-
-            yPos -= 16.0f;
-
-            _Missile boom = new ShipMissile(xPos, yPos);
-            MissileFactory tmp = MissileFactory.getInstance();
-            
-            tmp.setParent(mRoot);
-            tmp.setBatch(SpriteBatch.Name.Projectiles);
-            tmp.setColBatch(SpriteBatch.Name.Collision);
-
-            tmp.currBatch.add(boom.drawSprite);
-            tmp.colBatch.add(boom.collision.drawSprite);
-            tmp.tree.insert(boom, tmp.parent);
         }
 
 

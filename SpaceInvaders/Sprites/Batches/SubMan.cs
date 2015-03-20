@@ -74,13 +74,13 @@ namespace SpaceInvaders
                 return toAdd;
             }
 
-            protected SubLink baseFind(Enum _name)
+            protected SubLink baseFind(Enum _name, Index _index)
             {
                 SubLink tmp = this.active;
 
                 while (tmp != null)
                 {
-                    if (tmp.getName().Equals(_name))
+                    if (tmp.getName().Equals(_name) && tmp.getIndex().Equals(_index))
                     {
                         break;
                     }
@@ -132,10 +132,10 @@ namespace SpaceInvaders
                 }
             }
 
-            protected void baseRemove(Enum _name)
+            protected void baseRemove(Enum _name, Index _index)
             {
                 // find texture & remove
-                SubLink tmp = this.baseFind(_name);
+                SubLink tmp = this.baseFind(_name, _index);
 
                 baseRemove(tmp);
             }

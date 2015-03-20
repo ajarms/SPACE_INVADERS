@@ -67,7 +67,7 @@ namespace SpaceInvaders
 
         public override void visitShieldColumn(GameObj other)
         {
-            other.visitMissileRoot(this);
+            ColPair.collide(other, this.child as GameObj);
         }
 
         public override void visitAlien(GameObj other)

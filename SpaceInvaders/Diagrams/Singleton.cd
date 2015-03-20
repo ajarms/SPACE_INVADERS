@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvaders.Man" Collapsed="true">
+    <Position X="1.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQACAAAACIIgAAAAAAQAABAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>Base Systems\Man.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.ImgMan">
+    <Position X="1.25" Y="2" Width="1.5" />
+    <Members>
+      <Method Name="add" Hidden="true" />
+      <Method Name="destroy" Hidden="true" />
+      <Method Name="find" Hidden="true" />
+      <Method Name="getNew" Hidden="true" />
+      <Method Name="printStats" Hidden="true" />
+      <Method Name="remove" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Base Systems\ImgMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

@@ -28,30 +28,34 @@ namespace SpaceInvaders
 
         public override void visitMissileRoot(GameObj other)
         {
-            // drop one level
+            other.visitAlienColumn(this);
+        }
+
+        public override void visitMissile(GameObj other)
+        {
             GameObj curr = this.child as GameObj;
 
-            // collide against everything at this level
-            while (curr != null)
+            // get youngest child (bottom block)
+            while (curr.sibling != null)
             {
-                ColPair.collide(curr, other);
-
                 curr = curr.sibling as GameObj;
             }
+
+            Subject tmp = ColMan.getActivePair().sub;
+
+            tmp.set(curr, other);
+            tmp.notify();
         }
 
         public override void visitBomb(GameObj other)
         {
-            // drop one level
+            // get eldest child (top block)
             GameObj curr = this.child as GameObj;
 
-            // collide against everything at this level
-            while (curr != null)
-            {
-                ColPair.collide(curr, other);
+            Subject tmp = ColMan.getActivePair().sub;
 
-                curr = curr.sibling as GameObj;
-            }
+            tmp.set(curr, other);
+            tmp.notify();
         }
 
         public override void visitAlien(GameObj other)

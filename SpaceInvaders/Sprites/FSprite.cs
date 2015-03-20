@@ -20,6 +20,11 @@ namespace SpaceInvaders
             this.target = null;
         }
 
+        public override void setColor(float red, float green, float blue)
+        {
+            this.target.setColor(red, green, blue);
+        }
+
         public override void update()
         {
             target.x = this.x;

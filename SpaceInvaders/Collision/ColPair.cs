@@ -20,6 +20,7 @@ namespace SpaceInvaders
             Shield_Bomb,
             Bomb_Wall,
             Missile_Wall,
+            Missile_Bomb,
             NOT_INITIALIZED
         }
 

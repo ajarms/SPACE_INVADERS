@@ -36,12 +36,13 @@ namespace SpaceInvaders
         }
 
         // grabs from reserve, sets values, adds to active
-        public static void add(BSprite.Name inName, Image inImg, float x, float y, float sx = 1.0f, float sy = 1.0f, float angle = 0.0f)
+        public static BSprite add(BSprite.Name inName, Image inImg, float x, float y, float sx = 1.0f, float sy = 1.0f, float angle = 0.0f)
         {
             SpriteMan tmp = SpriteMan.getInstance();
 
             GSprite toAdd = tmp.baseAdd() as GSprite;
             toAdd.set(inName, inImg, x, y, sx, sy, angle);
+            return toAdd;
         }
 
         // search the active list; null on fail-to-find

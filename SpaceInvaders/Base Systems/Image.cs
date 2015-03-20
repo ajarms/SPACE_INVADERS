@@ -31,9 +31,14 @@ namespace SpaceInvaders
             Missile,
             BombA_0,
             BombA_1,
+            BombA_2,
+            BombA_3,
             BombB_0,
+            BombB_1,
+            BombB_2,
             BombC_0,
             BombC_1,
+            BombC_2,
             NOT_INITIALIZED
         }
 

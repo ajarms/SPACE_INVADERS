@@ -42,9 +42,9 @@ namespace SpaceInvaders
             tmp.colBatch.add(group.collision.drawSprite);
             tmp.tree.insert(group, tmp.parent);
 
-            float startX = 128.0f + 4.0f;
-            float startY = 128.0f + 4.0f;
-            float spacing = 200.0f;
+            float startX = 116.0f + 4.0f;
+            float startY = 192.0f + 4.0f;
+            float spacing = 192.0f;
 
             // make 4 shields
             for (int i = 0; i < 4; ++i)
@@ -228,8 +228,10 @@ namespace SpaceInvaders
         {
             _Shield block;
             block = new ShieldBlock(_index, xPos, yPos, _name);
+            block.drawSprite.setColor(0.0f, 250.0f, 0.0f);
             this.currBatch.add(block.drawSprite);
-            this.colBatch.add(block.collision.drawSprite);
+            //not adding blocks' collision objects to the batch to be drawn; they don't add new information and hurt framerate
+            //this.colBatch.add(block.collision.drawSprite);
             this.tree.insert(block, this.parent);
         }
 

@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvaders.Man" Collapsed="true">
+    <Position X="1" Y="1.25" Width="1.5" />
+    <Members>
+      <Method Name="baseDestroy" Hidden="true" />
+      <Method Name="basePrintStats" Hidden="true" />
+      <Method Name="fillReserve" Hidden="true" />
+      <Method Name="getNew" Hidden="true" />
+      <Method Name="getReserved" Hidden="true" />
+      <Method Name="Man" Hidden="true" />
+      <Field Name="stats" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Struct Name="SpaceInvaders.Man.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Base Systems\Man.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <AssociationLine Name="active" Type="SpaceInvaders.MLink" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="1.625" />
+        <Point X="4.5" Y="1.625" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.641" Y="-0.221" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="reserved" Type="SpaceInvaders.MLink" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="1.438" />
+        <Point X="4.5" Y="1.438" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.558" Y="0.039" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQACAAAACIIgAAAAAAQAABAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>Base Systems\Man.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+      <Field Name="reserved" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.MLink" Collapsed="true">
+    <Position X="4.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Base Systems\MLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.Image">
+    <Position X="4.5" Y="2.25" Width="1.5" />
+    <Members>
+      <Method Name="getIndex" Hidden="true" />
+      <Method Name="getName" Hidden="true" />
+      <Method Name="Image" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SpaceInvaders.Image.Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Base Systems\Image.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAMAAAAAAEAAAIAAAEAAABAAA=</HashCode>
+      <FileName>Base Systems\Image.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.ImgMan">
+    <Position X="1" Y="2.25" Width="1.5" />
+    <Members>
+      <Method Name="add" Hidden="true" />
+      <Method Name="create" Hidden="true" />
+      <Method Name="destroy" Hidden="true" />
+      <Method Name="find" Hidden="true" />
+      <Method Name="getInstance" Hidden="true" />
+      <Method Name="ImgMan" Hidden="true" />
+      <Method Name="printStats" Hidden="true" />
+      <Method Name="remove" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAAAAEAAAABAAAQACABAAAACAAA=</HashCode>
+      <FileName>Base Systems\ImgMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

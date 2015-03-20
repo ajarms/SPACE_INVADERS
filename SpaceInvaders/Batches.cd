@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvaders.BatchNode">
+    <Position X="4.5" Y="2.5" Width="1.5" />
+    <Members>
+      <Method Name="~BatchNode" Hidden="true" />
+      <Method Name="BatchNode" Hidden="true" />
+      <Method Name="getIndex" Hidden="true" />
+      <Method Name="getName" Hidden="true" />
+      <Method Name="set" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAYAEAAAABAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Sprites\Batches\BatchNode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="sprite" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.SBatchMan">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <Members>
+      <Method Name="add" Hidden="true" />
+      <Method Name="create" Hidden="true" />
+      <Method Name="destroy" Hidden="true" />
+      <Method Name="drawOff" Hidden="true" />
+      <Method Name="drawOn" Hidden="true" />
+      <Method Name="find" Hidden="true" />
+      <Method Name="getInstance" Hidden="true" />
+      <Method Name="getNew" Hidden="true" />
+      <Field Name="instance" Hidden="true" />
+      <Method Name="printStats" Hidden="true" />
+      <Method Name="remove" Hidden="true" />
+      <Method Name="SBatchMan" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAIAAEAABABAAAQACABAAAACAAE=</HashCode>
+      <FileName>Sprites\Batches\SBatchMan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.SpriteBatch">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <Members>
+      <Method Name="add" Hidden="true" />
+      <Method Name="destroy" Hidden="true" />
+      <Field Name="enabled" Hidden="true" />
+      <Method Name="find" Hidden="true" />
+      <Method Name="getIndex" Hidden="true" />
+      <Method Name="getName" Hidden="true" />
+      <Method Name="getNew" Hidden="true" />
+      <Field Name="index" Hidden="true" />
+      <Field Name="name" Hidden="true" />
+      <Method Name="remove" Hidden="true" />
+      <Method Name="set" Hidden="true" />
+      <Method Name="SpriteBatch" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="SpaceInvaders.SpriteBatch.Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sprites\Batches\SpriteBatch.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEIAaAEEAAAAAEAAAACAAEAAADAAA=</HashCode>
+      <FileName>Sprites\Batches\SpriteBatch.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.SubLink" Collapsed="true">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Sprites\Batches\SubLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.SubMan" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="SpaceInvaders.SubMan.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sprites\Batches\SubMan.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQAAAAAACIIgAAAAAAQAABAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Sprites\Batches\SubMan.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.Man" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="SpaceInvaders.Man.Stats" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Base Systems\Man.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <AssociationLine Name="active" Type="SpaceInvaders.MLink" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.25" Y="0.5" />
+        <Point X="1.25" Y="0.125" />
+        <Point X="2.75" Y="0.125" />
+        <Point X="2.75" Y="0.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIAQACAAAACIIgAAAAAAQAABAAAAAAAAIAAAAgA=</HashCode>
+      <FileName>Base Systems\Man.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="active" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.MLink" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEAAIAAAA=</HashCode>
+      <FileName>Base Systems\MLink.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.BSprite" HideInheritanceLine="true">
+    <Position X="6.75" Y="2.5" Width="1.5" />
+    <Members>
+      <Field Name="batch" Hidden="true" />
+      <Method Name="batchRemove" Hidden="true" />
+      <Method Name="BSprite" Hidden="true" />
+      <Method Name="getHeight" Hidden="true" />
+      <Method Name="getIndex" Hidden="true" />
+      <Method Name="getName" Hidden="true" />
+      <Method Name="getWidth" Hidden="true" />
+      <Field Name="index" Hidden="true" />
+      <Field Name="name" Hidden="true" />
+      <Method Name="setColor" Hidden="true" />
+      <Method Name="update" Hidden="true" />
+      <Field Name="x" Hidden="true" />
+      <Field Name="y" Hidden="true" />
+    </Members>
+    <NestedTypes>
+      <Enum Name="SpaceInvaders.BSprite.Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sprites\BSprite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAACAAAAAIAEAAAAAAEQAAAAABkAAENAAA=</HashCode>
+      <FileName>Sprites\BSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

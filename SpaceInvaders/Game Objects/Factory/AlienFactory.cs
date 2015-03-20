@@ -61,22 +61,12 @@ namespace SpaceInvaders
         }
 
         // makes entire alien grid given a starting corner and grid spacing, automatically uses alien spritebatch
-        public static void makeAlienGrid(float x_start, float y_start, float x_space, float y_space)
+        public static void spawnAliens(float x_start, float y_start, float x_space, float y_space)
         {
             AlienFactory tmp = AlienFactory.getInstance();
 
-            // set batches
-            tmp.setBatch(SpriteBatch.Name.Aliens);
-            tmp.setColBatch(SpriteBatch.Name.Collision);
+            AlienRoot grid = GObjMan.find(GameObj.Type._Alien, GameObj.Name.AlienRoot) as AlienRoot;
 
-            // set PCSTree
-            tmp.setPCSTree();
-            
-            _Alien grid = new AlienRoot(x_start, y_start);
-            GObjMan.add(grid);
-            tmp.colBatch.add(grid.collision.drawSprite);
-            tmp.tree.insert(grid, tmp.parent);
-            
 
             // make 11 columns
             for (int i = 0; i < 11; ++i)
@@ -96,8 +86,25 @@ namespace SpaceInvaders
 
             // set alien count for speed calculations
             GObjMan.resetAlienCount();
+            grid.resetColumnCount();
         }
 
+        public static void makeAlienRoot()
+        {
+            AlienFactory tmp = AlienFactory.getInstance();
+
+            // set batches
+            tmp.setBatch(SpriteBatch.Name.Aliens);
+            tmp.setColBatch(SpriteBatch.Name.Collision);
+
+            // set PCSTree
+            tmp.setPCSTree();
+
+            AlienRoot grid = new AlienRoot(Constants.GRID_START_X, Constants.GRID_START_Y);
+            GObjMan.add(grid);
+            tmp.colBatch.add(grid.collision.drawSprite);
+            tmp.tree.insert(grid, tmp.parent);
+        }
         
         //---------------------------------------
         private static AlienFactory instance;

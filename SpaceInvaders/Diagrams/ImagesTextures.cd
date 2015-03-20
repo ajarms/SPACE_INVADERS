@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvaders.Image" Collapsed="true">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <Members>
+      <Field Name="index" Hidden="true" />
+      <Field Name="name" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SpaceInvaders.Image.Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Base Systems\Image.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAMAAAAAAEAAAIAAAEAAABAAA=</HashCode>
+      <FileName>Base Systems\Image.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="text" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SpaceInvaders.Texture" Collapsed="true">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAEAAAAAAEAAAIAAAEAAABAAA=</HashCode>
+      <FileName>Base Systems\Texture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.BSprite" Collapsed="true">
+    <Position X="1" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAACAAAAAIAEAAAAAAEQAAAAABkAAENAAA=</HashCode>
+      <FileName>Sprites\BSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.GSprite" Collapsed="true">
+    <Position X="1" Y="3.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="img" Type="SpaceInvaders.Image" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="3.438" />
+        <Point X="3.156" Y="3.438" />
+        <Point X="3.156" Y="2.969" />
+        <Point X="4" Y="2.969" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="sprite" Type="Azul.Sprite2D" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="3.625" />
+        <Point X="3.167" Y="3.625" />
+        <Point X="3.167" Y="4.005" />
+        <Point X="4" Y="4.005" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>wAAAAAAAAAAAEABAAAYAAAAAABAAQACAAAAAAABMAAA=</HashCode>
+      <FileName>Sprites\GSprite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="img" />
+      <Field Name="sprite" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Azul.Sprite2D" Collapsed="true">
+    <Position X="4" Y="3.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

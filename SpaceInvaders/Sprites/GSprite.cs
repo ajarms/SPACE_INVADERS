@@ -11,6 +11,7 @@ namespace SpaceInvaders
         {
             this.img = null;
             this.sprite = null;
+            this.color = new Azul.Color();
             this.index = Index._0;
             this.sx = 1.0f;
             this.sy = 1.0f;
@@ -43,6 +44,15 @@ namespace SpaceInvaders
                                             new Azul.Rect(x, y, inImg.rect.w, inImg.rect.h));
         }
 
+        public override void setColor(float red, float green, float blue)
+        {
+            this.color.setRed(red);
+            this.color.setGreen(green);
+            this.color.setBlue(blue);
+
+            this.sprite.setColor(this.color);
+        }
+
         override public void update()
         {
             this.sprite.x = this.x;
@@ -70,6 +80,7 @@ namespace SpaceInvaders
 
         //-----------------------------
         public Image img;
+        public Azul.Color color;
         public Azul.Sprite2D sprite;
         protected float sx;
         protected float sy;

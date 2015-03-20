@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvaders.BSprite">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Method Name="batchRemove" Hidden="true" />
+      <Method Name="BSprite" Hidden="true" />
+      <Method Name="getHeight" Hidden="true" />
+      <Method Name="getIndex" Hidden="true" />
+      <Method Name="getName" Hidden="true" />
+      <Method Name="getWidth" Hidden="true" />
+      <Method Name="setColor" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="SpaceInvaders.BSprite.Name" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Sprites\BSprite.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAACAAAAAIAEAAAAAAEQAAAAABkAAENAAA=</HashCode>
+      <FileName>Sprites\BSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.GSprite">
+    <Position X="3.5" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="~GSprite" Hidden="true" />
+      <Method Name="getHeight" Hidden="true" />
+      <Method Name="getWidth" Hidden="true" />
+      <Method Name="GSprite" Hidden="true" />
+      <Method Name="set" Hidden="true" />
+      <Method Name="setColor" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>wAAAAAAAAAAAEABAAAYAAAAAABAAQACAAAAAAABMAAA=</HashCode>
+      <FileName>Sprites\GSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvaders.FSprite">
+    <Position X="1.25" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="~FSprite" Hidden="true" />
+      <Method Name="FSprite" Hidden="true" />
+      <Method Name="getHeight" Hidden="true" />
+      <Method Name="getWidth" Hidden="true" />
+      <Method Name="setColor" Hidden="true" />
+    </Members>
+    <AssociationLine Name="target" Type="SpaceInvaders.BSprite" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.438" Y="2.75" />
+        <Point X="1.438" Y="1.344" />
+        <Point X="2.5" Y="1.344" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAIAIAAAAAAAAAQAAAAAAAAAAMAAA=</HashCode>
+      <FileName>Sprites\FSprite.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="target" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

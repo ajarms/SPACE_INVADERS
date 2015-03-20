@@ -4,24 +4,38 @@ namespace SpaceInvaders
 {
     class SoundEvent : Event
     {
-        public enum Name
-        {
-            Alien_MoveA,
-            Alien_MoveB,
-            Alien_MoveC,
-            Alien_MoveD,
-            Player_Shoot,
-            UFO_OnScreen,
-            Explosion,
-            NOT_INITIALIZED
-        }
-
-        public SoundEvent()
+        public SoundEvent(Event.Name _name)
             : base()
         {
-            this.name = Name.NOT_INITIALIZED;
+            this.name = _name;
 
-            this.pSound = null;
+            //switch (_name)
+            //{
+            //    case Event.Name.Alien_SoundA:
+            //        this.pSound = Azul.Audio.playSound("A.wav", false, true, true);
+            //        break;
+            //    case Event.Name.Alien_SoundB:
+            //        this.pSound = Azul.Audio.playSound("B.wav", false, true, true);
+            //        break;
+            //    case Event.Name.Alien_SoundC:
+            //        this.pSound = Azul.Audio.playSound("C.wav", false, true, true);
+            //        break;
+            //    case Event.Name.Alien_SoundD:
+            //        this.pSound = Azul.Audio.playSound("D.wav", false, true, true);
+            //        break;
+            //    case Event.Name.Shoot_Sound:
+            //        this.pSound = Azul.Audio.playSound("shoot.wav", false, true, true);
+            //        break;
+            //    case Event.Name.UFO_Sound:
+            //        this.pSound = Azul.Audio.playSound("ufo_highitch.wav", true, true, true);
+            //        break;
+            //    case Event.Name.Death_Sound:
+            //        this.pSound = Azul.Audio.playSound("explosion.wav", true, true, true);
+            //        break;
+            //    case Event.Name.Explosion_Sound:
+            //        this.pSound = Azul.Audio.playSound("invaderkilled.wav", true, true, true);
+            //        break;
+            //}
         }
 
         ~SoundEvent()
@@ -29,24 +43,48 @@ namespace SpaceInvaders
             this.pSound = null;
         }
 
-        public void set(SoundEvent.Name _name)
-        {
-            this.name = _name;
-            
-            switch (_name)
-            {
-                case SoundEvent.Name.Alien_MoveA:
-                    this.pSound = null; //new Azul.Sound();
-                    break;
-            }
-        }
-
         public override void execute(float deltaTime)
         {
-            // playback sound
 
-            // add back onto timer
-            TimerMan.add(Timer.Name.AlienAnimationTimer, this, deltaTime);
+            switch (name)
+            {
+                case Event.Name.Alien_SoundA:
+                    this.pSound = Azul.Audio.playSound("A.wav", false, true, true);
+                    this.play();
+                    TimerMan.add(Timer.Name.AlienAnimationTimer, this, Constants.ALIEN_SPEED() * 4);
+                    break;
+                case Event.Name.Alien_SoundB:
+                    this.pSound = Azul.Audio.playSound("B.wav", false, true, true);
+                    this.play();
+                    TimerMan.add(Timer.Name.AlienAnimationTimer, this, Constants.ALIEN_SPEED() * 4);
+                    break;
+                case Event.Name.Alien_SoundC:
+                    this.pSound = Azul.Audio.playSound("C.wav", false, true, true);
+                    this.play();
+                    TimerMan.add(Timer.Name.AlienAnimationTimer, this, Constants.ALIEN_SPEED() * 4);
+                    break;
+                case Event.Name.Alien_SoundD:
+                    this.pSound = Azul.Audio.playSound("D.wav", false, true, true);
+                    this.play();
+                    TimerMan.add(Timer.Name.AlienAnimationTimer, this, Constants.ALIEN_SPEED()*4);
+                    break;
+                case Event.Name.Shoot_Sound:
+                    this.pSound = Azul.Audio.playSound("shoot.wav", false, true, true);
+                    this.play();
+                    break;
+                case Event.Name.UFO_Sound:
+                    this.pSound = Azul.Audio.playSound("ufo_highpitch.wav", true, true, true);
+                    this.play();
+                    break;
+                case Event.Name.Death_Sound:
+                    this.pSound = Azul.Audio.playSound("explosion.wav", false, true, true);
+                    this.play();
+                    break;
+                case Event.Name.Explosion_Sound:
+                    this.pSound = Azul.Audio.playSound("invaderkilled.wav", false, true, true);
+                    this.play();
+                    break;
+            }
         }
 
         override public Enum getName()
@@ -54,9 +92,14 @@ namespace SpaceInvaders
             return this.name;
         }
 
-        public void pause(SoundEvent.Name _name)
+        public void pause()
         {
-            SoundEvent tmp;
+            this.pSound.Pause(true);
+        }
+
+        public void play()
+        {
+            this.pSound.Pause(false);
         }
 
         override public Enum getIndex()
@@ -65,7 +108,7 @@ namespace SpaceInvaders
         }
 
         //-------------------
-        public SoundEvent.Name name;
+        public Event.Name name;
         public Index index = Index._0;
 
         Azul.Sound pSound;

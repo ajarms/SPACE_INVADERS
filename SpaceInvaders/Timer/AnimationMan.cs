@@ -35,13 +35,13 @@ namespace SpaceInvaders
         }
 
         // grabs from reserve, sets values, adds to active
-        public static AnimationEvent add(AnimationEvent.Name _name, bool deltaOverride = false, GameObj moveTarget = null, float deltaX = 0.0f, float deltaY = 0.0f)
+        public static AnimationEvent add(AnimationEvent.Name _name, bool repeat = true, bool deltaOverride = false, GameObj moveTarget = null, float deltaX = 0.0f, float deltaY = 0.0f)
         {
             AnimationMan tmp = AnimationMan.getInstance();
 
             AnimationEvent toAdd = tmp.baseAdd() as AnimationEvent;
 
-            toAdd.set(_name, deltaOverride, moveTarget, deltaX, deltaY);
+            toAdd.set(_name, repeat, deltaOverride, moveTarget, deltaX, deltaY);
 
             return toAdd;
         }

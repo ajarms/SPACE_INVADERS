@@ -9,28 +9,18 @@ namespace SpaceInvaders
         {
             this.x = _x;
             this.y = _y;
-            this.total = _x;
         }
 
         public override void move(float deltaX, float deltaY)
         {
-            float width = 640.0f;
             GameObj pChild = this.child as GameObj;
 
-            if (this.total + width > Constants.SCREEN_WIDTH - ImgMan.find(Image.Name.Octopus_0).rect.w / 4 || this.total < ImgMan.find(Image.Name.Octopus_0).rect.w / 4)
+            if (pChild != null)
             {
-                this.direction *= -1.0f;
-                pChild.move(2.0f * this.direction, deltaY);
-                this.x += 2.0f * this.direction;
+                pChild.move(deltaX * this.direction, deltaY);
+                this.x += deltaX * this.direction;
                 this.y += deltaY;
             }
-            else
-            {
-                pChild.move(deltaX * this.direction, 0.0f);
-                this.x += deltaX * this.direction;
-            }
-
-            this.total += deltaX * this.direction;
         }
 
         public override void update()
@@ -38,6 +28,29 @@ namespace SpaceInvaders
             // add union updating
             base.unionUpdate();
         }
+
+        public void changeDirection()
+        {
+            this.direction *= -1.0f;
+        }
+
+        public void resetColumnCount()
+        {
+            this.columnCount = 11;
+        }
+
+        public void updateColumnCount()
+        {
+            this.columnCount--;
+        }
+
+        public int getColumnCount()
+        {
+            return this.columnCount;
+        }
+
+        //------------------------------
+        private int columnCount;
 
         //-----------------------------------
         // visitor handlers
@@ -86,8 +99,10 @@ namespace SpaceInvaders
             // collide against everything at this level
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
                 curr = curr.sibling as GameObj;
             }
         }
@@ -100,13 +115,14 @@ namespace SpaceInvaders
             // collide against everything at this level
             while (curr != null)
             {
-                ColPair.collide(curr, other);
-
+                if (ColPair.collide(curr, other))
+                {
+                    return;
+                }
                 curr = curr.sibling as GameObj;
             }
         }
 
         private float direction = 1.0f;
-        private float total;
     }
 }
